@@ -1,0 +1,4 @@
+# src/App/ApiBundle/Resources/config/routing.yml
+app_api.user_all:
+    path:  /users.{_format}
+    defaults: { _controller: AppApiBundle:User:all, _format: ~ }

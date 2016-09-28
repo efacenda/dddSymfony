@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="user_repository.in_memory.class">App\CoreDomainBundle\Repository\InMemoryUserRepository</parameter>
+    </parameters>
+    <services>
+        <!-- Exposed Services -->
+        <service id="user_repository" alias="user_repository.in_memory"></service>
+        <!-- Concrete Implementations -->
+        <service id="user_repository.in_memory" public="false" class="%user_repository.in_memory.class%"></service>
+    </services>
+</container>

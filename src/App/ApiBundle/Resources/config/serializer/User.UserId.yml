@@ -1,0 +1,6 @@
+App\CoreDomain\User\UserId:
+    exclusion_policy: ALL
+    properties:
+        value:
+            expose: true
+            serialized_name: id
