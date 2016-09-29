@@ -3,9 +3,8 @@
 #    type:     annotation
 #    prefix:   /
 #
-#app_core_domain:
-#    resource: "@AppCoreDomainBundle/Controller/"
-#    type:     annotation
-#    prefix:   /
+app_core_domain:
+    path:  /
+    defaults: { _controller: AppCoreDomainBundle:Default:index, _format: ~ }
 imports:
     resource: "@AppApiBundle/Resources/config/routing.yml"

@@ -6,9 +6,9 @@
         <parameter key="user_repository.in_memory.class">App\CoreDomainBundle\Repository\InMemoryUserRepository</parameter>
     </parameters>
     <services>
-        <!-- Exposed Services -->
-        <service id="user_repository" alias="user_repository.in_memory"></service>
         <!-- Concrete Implementations -->
-        <service id="user_repository.in_memory" public="false" class="%user_repository.in_memory.class%"></service>
+        <service id="user_repository.in_memory" public="false" class="%user_repository.in_memory.class%" />
+        <!-- Exposed Services -->
+        <service id="user_repository" alias="user_repository.in_memory" />
     </services>
 </container>
